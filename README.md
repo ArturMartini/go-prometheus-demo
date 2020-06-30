@@ -35,6 +35,8 @@ scrape_configs:
 ```shell
 cp prometheus.yml /tmp/
 docker run --network host -v  /tmp/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
+docker run --network host go-prometheus
+docker build . -t go-prometheus
 curl http://localhost:8080/demo
 curl http://localhost:9090/api/v1/query?query=myapp_processed_ops_total
 ```
