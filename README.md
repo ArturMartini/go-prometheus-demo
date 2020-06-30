@@ -32,10 +32,12 @@ scrape_configs:
 ```
 
 ## For run
-* cp prometheus.yml /tmp/
-* docker run --network host -v  /tmp/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
-* curl http://localhost:8080/demo
-* curl http://localhost:9090/api/v1/query?query=myapp_processed_ops_total
+```shell
+cp prometheus.yml /tmp/
+docker run --network host -v  /tmp/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
+curl http://localhost:8080/demo
+curl http://localhost:9090/api/v1/query?query=myapp_processed_ops_total
+```
   
 
 If already success you need view look like json bellow:
